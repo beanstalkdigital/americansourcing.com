@@ -43,22 +43,6 @@ while ( have_posts() ) :
 					<?php get_template_part( 'template-parts/page/content', 'random' ); ?>
 				</div>
 			</div>
-			<div class="mt-5">
-				<?php if (comments_open()) :?>
-					<div id="disqus_thread"></div>
-					<script>
-						(function() {  
-							var d = document, s = d.createElement('script');
-
-							s.src = '//beanstalk-blog.disqus.com/embed.js';
-
-							s.setAttribute('data-timestamp', +new Date());
-							(d.head || d.body).appendChild(s);
-						})();
-					</script>
-				<?php endif;?>
-			</div>
-		</div>
 		<div class="col-4">
 			<?php dynamic_sidebar('post-sidebar'); ?>
 		</div>
