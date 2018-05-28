@@ -1,0 +1,140 @@
+/* Overrides for the Visual Composer tabs stylings */
+.vce-classic-tabs-container {
+  @media (--turd-browser) {
+    max-width: calc(100% - 1px) !important;
+  }
+}
+
+.vce-classic-tabs[data-vcv-tabs-state="tabs"] {
+  .vce-classic-tabs-panels-container {
+    border: 0 !important;
+  }
+
+  .vce-classic-tabs-container::after,
+  .vce-classic-tabs-container::before {
+
+    display: none !important;
+
+    border-bottom: 0 !important;
+  }
+
+  .vce-classic-tabs-panel-body {
+    padding: 0 !important;
+  }
+
+  .vce-classic-tabs-container .vce-classic-tabs-list {
+    display: flex !important;
+    flex-direction: column;
+
+    width: calc(100% - 1px);
+
+    @media (--tablet) {
+      flex-direction: row;
+    }
+
+    .vce-classic-tabs-tab {
+      margin-right: 0 !important;
+
+      color: var(--darkGray);
+      border-top: 0 !important;
+      border-bottom: 1px solid var(--gray) !important;
+      border-left: 0 !important;
+      background-color: #f1f1f1;
+      flex: 1;
+
+      font-weight: var(--fontWeightNormal);
+
+      @media (--tablet) {
+
+        border-bottom: 0 !important;
+
+        font-weight: var(--fontWeightLight);
+      }
+
+      &[data-vcv-active=true] {
+        color: var(--white);
+        background-color: var(--brandPrimary);
+
+        font-weight: var(--fontWeightNormal);
+      }
+
+      & > .vce-classic-tabs-tab-title {
+        padding: 0.5rem 2rem !important;
+
+        font-size: 1.1rem;
+
+        line-height: 1;
+
+        @media (--tablet) {
+          padding: 2rem !important;
+        }
+      }
+    }
+  }
+
+  &.-largeTabs .vce-classic-tabs-container .vce-classic-tabs-list {
+    .vce-classic-tabs-tab {
+      display: flex;
+
+      min-height: 0;
+
+      text-align: center;
+      align-items: stretch;
+
+      @media (--tablet) {
+        min-height: 10vh;
+      }
+
+      & > .vce-classic-tabs-tab-title {
+        font-size: 1rem;
+        line-height: inherit;
+        align-self: center;
+
+        @media (--tablet) {
+          font-size: 1.3rem;
+        }
+      }
+
+      &[data-vcv-active=true] {
+        & > .vce-classic-tabs-tab-title {
+          font-weight: inherit;
+        }
+      }
+    }
+  }
+
+}
+
+.vce-classic-tabs[data-vcv-tabs-state=accordion] {
+  .vce-classic-tabs-panel {
+    margin-top: -1px;
+    margin-bottom: 0 !important;
+
+    border: 0 !important;
+
+    &[data-vcv-active=true] {
+      .vce-classic-tabs-panel-title {
+        color: var(--white);
+        background-color: var(--brandPrimary);
+      }
+    }
+
+    .vce-classic-tabs-panel-title {
+
+      text-transform: uppercase;
+
+      color: var(--lightGray);
+      background-color: var(--darkGray);
+
+      font-size: 0.8rem;
+
+      font-weight: var(--fontWeightBold);
+    }
+  }
+
+  .vce-classic-tabs-panel-body {
+    padding: 0;
+
+    border: 0 !important;
+  }
+}

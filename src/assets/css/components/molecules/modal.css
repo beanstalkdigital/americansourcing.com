@@ -1,0 +1,107 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right:  0;
+  bottom: 0;
+  left: 0;
+
+  transition: opacity 0.5s ease-in-out;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  &__overlay {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right:  0;
+    bottom: 0;
+    left: 0;
+
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+
+    opacity: 0;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  &__contents {
+    @apply --boxShadow;
+    position: absolute;
+
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+
+    width: calc(90% - 2rem);
+    padding: 1rem;
+
+    transition: transform 0.3s ease-in-out;
+    transform: translate(-50%, -20%);
+
+    color: var(--white);
+    background-color: #545859;
+
+    @media (--tablet) {
+      width: calc(90% - 4rem);
+      padding: 2rem;
+    }
+
+    @media (--tablet) {
+      max-width: 450px;
+    }
+
+    .gform_title {
+      margin-top: 0;
+    }
+
+    &__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+
+      width: 40px;
+      height: 40px;
+
+      cursor: pointer;
+      text-align: right;
+
+      @media (--tablet) {
+        top: 2rem;
+        right: 2rem;
+      }
+    }
+
+    .gform_footer {
+      display: flex;
+      justify-content: flex-end;
+
+      @media (--tablet) {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+body.-modalOpen {
+  overflow: hidden;
+
+  .modal {
+
+    pointer-events: all;
+
+    opacity: 1;
+
+    .modal__overlay {
+      pointer-events: all;
+
+      opacity: 1;
+    }
+
+    .modal__contents {
+      transform: translate(-50%, -50%);
+    }
+  }
+}

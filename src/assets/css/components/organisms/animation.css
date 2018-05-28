@@ -1,0 +1,58 @@
+.o-aiAnimation {
+  position: relative;
+  color: #ffffff;
+  background-size: cover;
+  background-position: right 50%;
+  pointer-events: none;
+  user-select: none;
+  padding-top: 282.0512820512821%;
+
+  @media (--desktop) {
+    padding-top: 43.2142857142857%;
+  }
+
+  h2 {
+    @inherit: .h3;
+    font-weight: var(--fontWeightSemibold);
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+
+  h3 {
+    @inherit: .h4;
+    font-weight: var(--fontWeightLight);
+    margin-top: 5px;
+
+    &.color-brandPrimary {
+      font-size: 20px;
+      margin: 0;
+
+      & + div {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &__title span {
+    top: -0.5em;
+    right: -3em;
+    position: relative;
+    font-size: 0.5em;
+  }
+
+ &__canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    padding-top: 53.7777777777778%;
+  }
+
+  &__canvas > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

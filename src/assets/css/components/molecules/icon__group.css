@@ -1,0 +1,29 @@
+.icon__group {
+  & > div {
+    display: flex;
+    align-items: flex-start;
+
+    font-size: 0.9rem;
+
+    & > :first-child {
+      margin-top: 7px;
+      margin-right: 1rem;
+    }
+
+    img {
+      width: 30px;
+
+      @media (--turd-browser) {
+        min-width: 30px;
+        height: 30px !important;
+        margin-right: 0;
+      }
+    }
+
+    h4 {
+      margin-top: 0;
+
+      font-size: 28px;
+    }
+  }
+}

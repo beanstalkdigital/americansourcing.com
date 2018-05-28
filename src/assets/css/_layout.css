@@ -1,0 +1,154 @@
+html,
+body {
+  height: 100%;
+}
+
+#page.site {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+
+  @media (--tablet) {
+    display: grid;
+
+    padding: 0;
+    grid-template-columns: 1fr 720px 1fr;
+    grid-template-rows: var(--headerHeight) 1fr auto;
+  }
+
+  @media (--desktop) {
+    grid-template-columns: 1fr minmax(auto, 920px) 1fr;
+  }
+
+  @media (--large-desktop) {
+    grid-template-columns: 1fr minmax(auto, 1300px) 1fr;
+  }
+
+  @media (--turd-browser) {
+    display: -ms-grid;
+    -ms-grid-rows: none;
+  }
+
+  @media (--turd-browser) and (--tablet) {
+    -ms-grid-columns: 1fr 720px 1fr;
+  }
+
+  @media (--turd-browser) and (--desktop) {
+    -ms-grid-columns: 1fr 920px 1fr;
+  }
+
+  @media (--turd-browser) and (--large-desktop) {
+    -ms-grid-columns: 1fr 1300px 1fr;
+  }
+
+  .site-header,
+  .site-content,
+  .site-footer {
+    grid-column: 1/4;
+
+    @media (--turd-browser) {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+  }
+
+  .site-header {
+    grid-row: 1;
+
+    @media (--turd-browser) {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+    }
+  }
+
+  .site-content {
+    margin-top: var(--headerHeight);
+
+    @media (--tablet) {
+      margin-top: 0;
+      grid-column: 2/3;
+      grid-row: 2;
+    }
+
+    @media (--turd-browser) and (--tablet) {
+      margin-top: var(--headerHeight);
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+  }
+
+  .site-footer {
+    grid-row: 3;
+
+    @media (--turd-browser) {
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 1;
+    }
+  }
+}
+
+.container {
+  width: 90%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding: 0 5%;
+
+
+  @media (--desktop) {
+    width: 100%;
+    max-width: 920px;
+    padding: 0;
+  }
+
+  @media (--large-desktop) {
+    max-width: 1300px;
+  }
+
+  &.narrow {
+    width: 100%;
+
+    @media (--desktop) {
+      max-width: 720px;
+    }
+
+    @media (--large-desktop) {
+      max-width: 920px;
+    }
+  }
+}
+
+/* Z-Index Settings */
+.site-header {
+  z-index: 100;
+}
+
+/* VC Global Elements */
+.vce-global-element.vce {
+  margin-bottom: 0;
+}
+
+/* Page-specific layouts */
+body.single-post {
+  #page.site .site-content {
+    grid-column: 1/4;
+
+    @media (--turd-browser) {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+  }
+}
+
+body.single-team_member {
+  #page.site .site-content {
+    grid-column: 1/4;
+
+    @media (--turd-browser) {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+  }
+}

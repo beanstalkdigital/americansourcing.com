@@ -1,0 +1,124 @@
+:root {
+  --inputPlaceholder: {
+    color: var(--gray);
+
+    font-style: italic;
+  };
+}
+
+input,
+select,
+textarea,
+fieldset {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0;
+
+  margin-bottom: 0;
+
+  color: var(--gray);
+  border: 0;
+
+  font-size: 1rem;
+
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    @apply --inputPlaceholder;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    @apply --inputPlaceholder;
+  }
+
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    @apply --inputPlaceholder;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    @apply --inputPlaceholder;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+label {
+  vertical-align: middle;
+
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+
+  font-size: .6rem;
+
+  font-weight: var(--fontWeightBold);
+}
+
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  padding: 0.3rem;
+
+  vertical-align: middle;
+
+  line-height: 1;
+  -webkit-appearance: none;
+}
+
+input[type=submit] {
+  width: auto;
+}
+
+select {
+  line-height: 1.75;
+}
+
+select:not([multiple]) {
+  vertical-align: middle;
+}
+
+textarea {
+  height: 100px;
+
+  line-height: 1.2;
+
+  @media (--tablet) {
+    height: 150px;
+  }
+}
+
+.gform_fields {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  & > li {
+    display: block;
+
+    margin-bottom: 0.5rem;
+  }
+}
+
+.ginput_container_name {
+  display: flex;
+
+  & > * {
+    &:first-child {
+      padding-right: 1rem;
+    }
+  }
+}

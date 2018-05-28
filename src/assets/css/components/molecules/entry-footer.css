@@ -1,0 +1,29 @@
+.admin-context-links {
+  display: flex;
+  position: fixed;
+
+  z-index: 100;
+  right: 0;
+
+  bottom: 1rem;
+
+  padding: 0.75rem 1rem;
+
+  transition: transform 0.3s ease-in-out;
+
+  transform: translateX(calc(100% - 47px));
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: var(--darkGray);
+
+  box-shadow: 0 0 10px rgba(var(--black), 0.3);
+
+  &:hover {
+    transform: translateX(0);
+  }
+
+  .edit-link {
+    display: flex;
+  }
+}

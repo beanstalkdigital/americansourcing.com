@@ -1,0 +1,19 @@
+body.page-retail {
+  .hero-intro {
+    h1 {
+      font-size: 250%;
+
+      @media (--tablet) {
+        font-size: 300%;
+      }
+
+      @media (--desktop) {
+        font-size: 320%;
+      }
+
+      @media (--large-desktop) {
+        font-size: 400%;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.offscreen-bg {
+  .vce-asset-background-simple-item {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &.--right .vce-asset-background-simple-item {
+    @media (--tablet) {
+      transform: translateX(55%) translateY(10%);
+
+      background-position: left bottom;
+    }
+  }
+
+  &.--left .vce-asset-background-simple-item {
+    @media (--tablet) {
+      transform: translateX(-55%) translateY(10%);
+
+      background-position: right top;
+    }
+  }
+}
+
+/* Retail Page */
+body.page-retail {
+  #retail-s4 .offscreen-bg.--right {
+    .vce-asset-background-simple-item {
+
+      @media (--tablet) {
+        transform: translateX(50%) translateY(10%);
+      }
+
+      @media (--desktop) {
+        transform: translateX(50%) translateY(0);
+      }
+    }
+  }
+
+  #retail-s6 .offscreen-bg.--left {
+    .vce-asset-background-simple-item {
+      @media (--tablet) {
+        transform: translateX(-55%) translateY(0);
+
+        background-position: right bottom;
+      }
+    }
+  }
+}
+
+body.page-smart-offer-bank {
+  #retail-s4 .offscreen-bg.--right {
+    .vce-asset-background-simple-item {
+
+      @media (--tablet) {
+        transform: translateX(50%) translateY(10%);
+      }
+
+      @media (--desktop) {
+        transform: translateX(50%) translateY(0);
+      }
+    }
+  }
+}
+
+/* Consumer Goods */
+#csg {
+  &-s3 .offscreen-bg.--right {
+    .vce-asset-background-simple-item {
+      @media (--desktop) {
+        transform: translateX(58%) translateY(10%);
+      }
+    }
+  }
+
+  &-s5 .offscreen-bg.--left {
+    margin-top: -50px;
+
+    .vce-asset-background-simple-item {
+      transform: translateX(0) translateY(0);
+
+      @media (--tablet) {
+        transform: translateX(-43%) translateY(0);
+      }
+
+      @media (--desktop) {
+        transform: translateX(-46%) translateY(0);
+      }
+
+      @media (--large-desktop) {
+        transform: translateX(-46%) translateY(0);
+      }
+    }
+  }
+
+  &-s7 .offscreen-bg.--left {
+    margin-top: -50px;
+
+    .vce-asset-background-simple-item {
+      transform: translateX(0) translateY(0);
+
+      @media (--tablet) {
+        transform: translateX(-43%) translateY(0);
+      }
+
+      @media (--desktop) {
+        transform: translateX(-46%) translateY(0);
+      }
+
+      @media (--large-desktop) {
+        transform: translateX(-46%) translateY(0);
+      }
+    }
+  }
+}

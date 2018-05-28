@@ -1,0 +1,33 @@
+body {
+  color: var(--darkGray);
+
+  ::selection {
+    color: white;
+    background: var(--brandPrimary); /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    color: white;
+    background: var(--brandPrimary); /* Gecko Browsers */
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  @media (--turd-browser) {
+    width: 100%;
+
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  color: var(--brandPrimary);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
