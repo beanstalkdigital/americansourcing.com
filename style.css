@@ -8,3 +8,7 @@ Description: A custom theme for Eversight.
 Version: 1.0.0
 
 */
+
+h2, h3, h6, {
+	font-family: EB Garamond;
+}
