@@ -37,9 +37,8 @@ require get_template_directory() . '/inc/shortcodes.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-}
+} 
 
-<?php
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -363,4 +362,4 @@ function bs_list_comments( $args = array(), $comments = null ) {
         return $output;
     }
 }
-
+?>
