@@ -19,7 +19,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=11">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,500" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<?php wp_head(); ?>
 </head>
 
