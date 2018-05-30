@@ -11,7 +11,7 @@
 
 ?>
 </div><!-- #content -->
-<footer id="colophon" class="site-footer d-flex">
+<footer id="colophon" class="site-footer d-flex" style="background-color: white;">
 	<div class="container-fluid justify-content-center" style="flex-direction: column !important; margin-right: 30px; margin-left: 30px;">
 		<div class="row" style="background-color: #1A2435;">
 			<div class="col-md p-2" style="background-color: #D1D2D5;">
