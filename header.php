@@ -19,7 +19,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=11">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,500" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<?php wp_head(); ?>
@@ -65,4 +64,4 @@
 
   </header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content" style="grid-column: 0 !important;">

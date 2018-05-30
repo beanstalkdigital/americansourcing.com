@@ -13,6 +13,10 @@ h2, h3, h6, {
 	font-family: 'EB Garamond', serif;
 }
 
-.site-header__cta .desktop-up a{ 
+.site-header__cta a{ 
 	font-size: .7rem !important;
  }
+
+.site-content {
+	grid-column: 0 !important;
+}
