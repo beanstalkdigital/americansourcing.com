@@ -11,7 +11,7 @@
 
 ?>
 	</div><!-- #content -->
-	<footer>
+	<footer id="colophon" class="site-footer">
 	<div class="container" style="background-color: #202C42;">
       <div class="row d-flex">
       	<div class="col-md justify-content-center">
@@ -63,21 +63,6 @@
 			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
-
-	<div id="modal" class="modal">
-		<div class="modal__overlay"></div>
-		<div class="modal__contents">
-			<div class="modal__contents__close">
-				<i class="fal fa-times"></i>
-			</div>
-			<div id="modal-demo" class="modal__content__option">
-				<?php echo do_shortcode('[gravityform id=2 title=true description=false ajax=true tabindex=49]'); ?>
-			</div>
-			<div id="modal-contact" class="modal__content__option">
-				<?php echo do_shortcode('[gravityform id=3 title=true description=false ajax=true tabindex=49]'); ?>
-			</div>
-		</div>
-	</div>
 
 <?php wp_footer(); ?>
 <script defer src="https://pro.fontawesome.com/releases/v5.0.9/js/regular.js" integrity="sha384-C6h/8oKUfY6cVuGfFSu9uGIlFkaD1u1j+ByYGFTdFbOpHOHpw39lKxqEpRgLQg6A" crossorigin="anonymous"></script>
