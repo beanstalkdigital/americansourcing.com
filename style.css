@@ -12,3 +12,7 @@ Version: 1.0.0
 h2, h3, h6, {
 	font-family: 'EB Garamond', serif;
 }
+
+.site-header__cta .desktop-up a{ 
+	font-size: .7rem !important;
+ }
