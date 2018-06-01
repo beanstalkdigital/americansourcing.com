@@ -36,6 +36,7 @@
 </div>
 </footer>
 </div><!-- #page -->
+</div>
 
 <?php wp_footer(); ?>
 <script defer src="https://pro.fontawesome.com/releases/v5.0.9/js/regular.js" integrity="sha384-C6h/8oKUfY6cVuGfFSu9uGIlFkaD1u1j+ByYGFTdFbOpHOHpw39lKxqEpRgLQg6A" crossorigin="anonymous"></script>
