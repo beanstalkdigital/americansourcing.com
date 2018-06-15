@@ -1,0 +1,146 @@
+.post__card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-transform: none;
+  color: inherit;
+  background-color: var(--lightGray);
+  align-self: stretch;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media (--phone) {
+    margin-bottom: 1rem;
+  }
+
+  &.hentry {
+    margin-top: 0;
+  }
+
+  & .post__card__image {
+    position: relative;
+    background: var(--gray);
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+
+    &:before {
+      position: absolute;
+      content: "READ MORE";
+      color: white;
+      font-size: 20px;
+      font-weight: var(--fontWeightBold);
+      top: 50%;
+      left: 50%;
+      right: 0;
+      opacity: 0;
+      width: 100%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      will-change: opacity;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  & .post__card__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 170px;
+    font-family: var(--fontFamilySerif);
+    color: #808080;
+    align-self: stretch;
+    flex: 1;
+
+    & .entry-header {
+      flex: 1;
+    }
+  }
+
+  & .post__card__meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+
+    & .post__card__meta__author {
+      color: var(--black);
+      font-size: 13px;
+    }
+
+    & .post__card__meta__date {
+      color: var(--darkGray);
+      font-size: 12px;
+    }
+  }
+
+  & .entry-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--brandPrimary);
+    font-style: italic;
+    margin: 0 0 1rem 0;
+  }
+
+  & .entry-content {
+    color: var(--darkGray);
+
+    font-family: var(--fontFamilySerif);
+    font-size: 0.8rem;
+    line-height: 1.4;
+
+    flex: 1;
+  }
+}
+
+.card__grid {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5vh 0;
+
+  @media (--tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    align-items: stretch;
+  }
+
+  & .post__card {
+    align-self: stretch;
+  }
+}
+
+.amsource-blog-index-pagination {
+  text-align: center;
+  padding: 60px 0 30px;
+  font-size: 13px;
+
+  & .page-numbers {
+    color: var(--brandPrimary) !important;
+    padding: 0 3px;
+  }
+
+  & .page-numbers.current {
+    color: var(--brandSecondary) !important;
+  }
+
+}

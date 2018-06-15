@@ -28,6 +28,8 @@
 @import "./components/organisms/site-footer";
 @import "./components/organisms/eversight-resource-library";
 @import "./components/molecules/howItWorks__sections";
+@import "./components/organisms/post__featured";
+@import "./components/organisms/post__card";
 
 /* Pages */
 @import "./pages/home";
@@ -35,14 +37,11 @@
 @import "./pages/consumer-goods";
 @import "./pages/retail";
 
-/* Vue Component Styles */
-@import "../../components/CaseStudies/CaseStudies";
-
 :root {
-  --brandPrimary: #30d17d;
-  --brandSecondary: #00bad3;
+  --brandPrimary: #2a3a53;
+  --brandSecondary: #ba0c0e;
   --white: #ffffff;
-  --lightGray: #f3f3f3;
+  --lightGray: #f4f4f4;
   --gray: #b0afad;
   --darkGray: #44484f;
   --black: #21292c;
@@ -53,6 +52,7 @@
   --fontWeightNormal: 400;
   --fontWeightSemibold: 500;
   --fontWeightBold: 700;
+  --fontFamilySerif: "EB Garamond";
   --fontAwesome: "Font Awesome 5 Light";
 
   --boxShadow: {

@@ -210,3 +210,59 @@ body.single-post {
     }
   }
 }
+
+.amsource-blog-index__filters {
+  background-color: #f4f4f4;
+  padding: 2rem 0;
+  user-select: none;
+
+  .container {
+    display: flex;
+
+    & > * {
+      width: 50%;
+    }
+  }
+
+  & .amsource-blog-index__filters__categories {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    cursor: default;
+
+    & > * {
+      font-family: var(--fontFamilySerif);
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+      margin-right: 2rem;
+      font-size: 0.7rem;
+      font-weight: 400;
+
+      &:first-child {
+        color: var(--brandSecondary);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active a {
+        color: var(--brandSecondary);
+      }
+    }
+  }
+
+  & .field-group {
+    display: flex;
+
+    & > * {
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
