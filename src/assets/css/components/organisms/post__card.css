@@ -8,6 +8,11 @@
   align-self: stretch;
   box-shadow: 0 0 30px rgba(#2a3a53,0);
   transition: box-shadow 0.2s ease-in-out;
+  margin-bottom: 1rem;
+
+  @media (--tablet) {
+    margin-bottom: 0;
+  }
 
   &:before {
     content: "";
@@ -27,10 +32,6 @@
     text-decoration: none;
 
     box-shadow: 0 0 30px rgba(#2a3a53,0.2);
-  }
-
-  @media (--phone) {
-    margin-bottom: 1rem;
   }
 
   &.hentry {
@@ -123,9 +124,13 @@
 
   @media (--tablet) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     align-items: stretch;
+  }
+
+  @media (--desktop) {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   & .post__card {
