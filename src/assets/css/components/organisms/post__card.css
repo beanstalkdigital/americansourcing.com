@@ -6,6 +6,8 @@
   color: inherit;
   background-color: var(--lightGray);
   align-self: stretch;
+  box-shadow: 0 0 30px rgba(#2a3a53,0);
+  transition: box-shadow 0.2s ease-in-out;
 
   &:before {
     content: "";
@@ -14,7 +16,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     opacity: 0;
     will-change: opacity;
     transition: opacity 0.3s ease-in-out;
@@ -23,6 +25,8 @@
 
   &:hover {
     text-decoration: none;
+
+    box-shadow: 0 0 30px rgba(#2a3a53,0.2);
   }
 
   @media (--phone) {

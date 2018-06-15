@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<?php 	
+<?php
 
 while ( have_posts() ) :
 	the_post(); ?>
@@ -38,10 +38,8 @@ while ( have_posts() ) :
 				</div>
 			</div>
 			<div class="container-fluid">
-				<h3 class="mt-5">Recommended</h3>
-				<div class="row mt-3">
-					<?php get_template_part( 'template-parts/page/content', 'random' ); ?>
-				</div>
+				<h3 class="mt-5 color-secondary">Related Posts & News</h3>
+				<?php get_template_part( 'template-parts/page/content', 'random' ); ?>
 			</div>
 		<div class="col-4">
 			<?php dynamic_sidebar('post-sidebar'); ?>
@@ -51,7 +49,7 @@ while ( have_posts() ) :
 
 	<?php
 
- //previous_post_link(''); 
+ //previous_post_link('');
  // next_post_link(); ?>
 
 			<?php endwhile; // End of the loop.
@@ -59,4 +57,4 @@ while ( have_posts() ) :
 
 			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae2952d58360536"></script>
 
-			<?php get_footer(); ?>
+			<?php get_sidebar(); get_footer(); ?>

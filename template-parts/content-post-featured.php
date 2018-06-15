@@ -6,7 +6,7 @@
  *
  * @package tethr-wp
  */
-$featured_image = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+
 $recent_args = array(
     "posts_per_page" => 1,
     "orderby"        => "date",
@@ -15,6 +15,7 @@ $recent_args = array(
 
 $recent_posts = new WP_Query( $recent_args );
 if ( $recent_posts -> have_posts() ) : $recent_posts -> the_post();
+$featured_image = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post__featured'); ?>>
@@ -39,4 +40,4 @@ if ( $recent_posts -> have_posts() ) : $recent_posts -> the_post();
 	</div><!-- /.post__featured__content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
-<?php wp_reset_postdata(  ); endif; ?>
+<?php wp_reset_postdata(); endif; ?>

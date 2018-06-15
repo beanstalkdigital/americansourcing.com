@@ -58,6 +58,11 @@
       background-color: var(--brandSecondary);
       font-size: 0.8rem;
       letter-spacing: 0.15rem;
+
+      &:hover {
+        text-decoration: none;
+        background-color: #a20b0c;
+      }
     }
   }
 

@@ -64,4 +64,4 @@
 
   </header><!-- #masthead -->
 
-	<div id="content" class="site-content" style="grid-column: 0 !important;">
+	<div id="content" class="site-content" style="">
