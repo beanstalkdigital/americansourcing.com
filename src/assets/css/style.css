@@ -7,36 +7,16 @@
 
 /* Components */
 @import "./components/atoms/buttons";
-@import "./components/molecules/categories-impacted";
-@import "./components/molecules/entry-footer";
-@import "./components/molecules/donut-chart";
-@import "./components/molecules/ebook-form";
-@import "./components/molecules/feature__spotlight";
-@import "./components/molecules/hero-header";
-@import "./components/molecules/icon__list";
-@import "./components/molecules/icon__group";
-@import "./components/molecules/icon__sequence__list";
-@import "./components/molecules/modal";
-@import "./components/molecules/offscreen-bg";
-@import "./components/molecules/partners__list";
-@import "./components/molecules/team__member";
-@import "./components/molecules/testimonial__list";
-@import "./components/molecules/vce-classic-tabs";
-@import "./components/organisms/animation";
 @import "./components/organisms/site-header";
 @import "./components/organisms/site-content";
 @import "./components/organisms/site-footer";
 @import "./components/organisms/home-grid";
-@import "./components/organisms/eversight-resource-library";
-@import "./components/molecules/howItWorks__sections";
 @import "./components/organisms/post__featured";
 @import "./components/organisms/post__card";
 
 /* Pages */
 @import "./pages/home";
 @import "./pages/posts";
-@import "./pages/consumer-goods";
-@import "./pages/retail";
 
 :root {
   --brandPrimary: #2a3a53;
