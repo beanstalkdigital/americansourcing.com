@@ -1,22 +1,28 @@
 
 
 .homeGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
   background-image: url(~images/home-grid-bg.jpg);
   background-position: center center;
   background-size: cover;
+  font-size: 0.7rem;
+  margin: 0 -30px;
 
   @media (--tablet) {
-    height: 48vw;
-    grid-template-columns: auto 350px 350px auto;
+    display: grid;
+    height: 100vw;
+    grid-template-columns: auto auto;
     grid-template-rows: auto 350px;
+    font-size: 1rem;
+  }
+
+  @media (--desktop) {
+    grid-template-columns: auto 350px 350px auto;
+    height: 48vw;
   }
 
   & .homeGrid__item {
     border: 2px solid white;
-    background-color: rgba(42,58,83, 0);
+    background-color: rgba(42,58,83, 0.7);
     text-align: center;
     display: flex;
     align-items: center;
@@ -27,14 +33,22 @@
     transition: background-color 0.3s ease-in-out;
     grid-row: auto;
 
+    @media (--tablet) {
+      background-color: rgba(42,58,83, 0);
+    }
+
 
     & .homeGrid__item__content {
-      transform: translateY(-20px);
       transition: opacity 0.3s ease-in-out,
                   transform 0.3s ease-in-out;
 
-      opacity: 0;
+      opacity: 1;
       font-weight: 300;
+
+      @media (--tablet) {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
     }
 
 
