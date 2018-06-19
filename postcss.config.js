@@ -1,6 +1,9 @@
 module.exports = {
   plugins: {
     'autoprefixer': { grid: true },
+    'postcss-assets': {
+      loadPaths: ['img/'],
+    },
     'postcss-import': {},
     'postcss-cssnext': {
       warnForDuplicates: false,
@@ -15,7 +18,6 @@ module.exports = {
       }
     },
     'postcss-inherit': {},
-    'postcss-assets': {},
     'postcss-nested': {},
     cssnano: {
       reduceIdents: false,

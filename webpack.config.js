@@ -1,9 +1,14 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js',
+      'images': path.resolve('src/assets/img')
+    }
+  },
   entry: {
     "index": './src/index.js',
     "index.min": "./src/index.js"
@@ -57,23 +62,27 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            { loader: 'css-loader', options: { importLoaders: 1 } },
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 1,
+                // url: false
+              }
+            },
             'postcss-loader'
           ]
         })
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: 'img/'
+          }
+        }]
       }
     ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
   },
   plugins: [
     new webpack.ProvidePlugin({

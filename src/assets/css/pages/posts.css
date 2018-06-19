@@ -6,6 +6,19 @@ body.single-post {
   .card__grid {
     padding: 0;
   }
+
+  .post-featured-image {
+    padding-top: 30%;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .entry-title {
+    margin: 1rem 0;
+    font-size: 30px;
+    color: var(--brandPrimary);
+    font-style: italic;
+  }
 }
 
 .amsource-blog-index__filters {
@@ -84,6 +97,23 @@ body.single-post {
 
     select {
       background-color: white;
+    }
+  }
+}
+
+.two-column-layout {
+  display: flex;
+
+  & > * {
+    &:first-child {
+      width: 70%;
+
+      flex: 1;
+    }
+
+    &:last-child {
+      width: 25%;
+      padding-left: 5%;
     }
   }
 }

@@ -6,7 +6,7 @@
 while ( have_posts() ) :
 	the_post(); ?>
 
-	<h6 class="mt-3 pt-3" style="color:#A50D11; text-transform: uppercase;">CBD Blog & News</h6>
+	<h6 class="mt-3 pt-3" style="color:#A50D11; text-transform: uppercase;">CBD Blog &amp; News</h6>
 	<h1 class="mt-3 pt-3"><?php the_title();?></h1>
 	<ul class="list-inline">
 

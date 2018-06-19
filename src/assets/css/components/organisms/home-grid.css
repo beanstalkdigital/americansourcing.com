@@ -1,0 +1,9 @@
+
+
+.homeGrid {
+  height: 48vw;
+
+  background-image: url(~images/home-grid-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}

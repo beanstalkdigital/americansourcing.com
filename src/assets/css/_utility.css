@@ -21,6 +21,10 @@
   &-brandPrimary {
     color: var(--brandPrimary);
   }
+
+  &-brandSecondary {
+    color: var(--brandSecondary);
+  }
 }
 
 .fill {

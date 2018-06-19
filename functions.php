@@ -31,9 +31,8 @@ require get_template_directory() . '/inc/custom-post-types.php';
  * Shortcodes
  */
 require get_template_directory() . '/inc/shortcodes.php';
-
 require get_template_directory() . '/inc/blog-index.php';
-
+require get_template_directory() . '/inc/home-grid.php';
 
 /**
  * Load Jetpack compatibility file.

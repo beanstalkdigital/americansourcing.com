@@ -26,6 +26,7 @@
 @import "./components/organisms/site-header";
 @import "./components/organisms/site-content";
 @import "./components/organisms/site-footer";
+@import "./components/organisms/home-grid";
 @import "./components/organisms/eversight-resource-library";
 @import "./components/molecules/howItWorks__sections";
 @import "./components/organisms/post__featured";
