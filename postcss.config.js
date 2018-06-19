@@ -1,6 +1,7 @@
 module.exports = {
   plugins: {
     'autoprefixer': { grid: true },
+    'postcss-hexrgba': {},
     'postcss-assets': {
       loadPaths: ['img/'],
     },
@@ -23,7 +24,6 @@ module.exports = {
       reduceIdents: false,
       zindex: false
     },
-    'postcss-hexrgba': {},
     'postcss-reporter': {
       clearMessages: true
     }
