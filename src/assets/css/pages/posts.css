@@ -1,6 +1,12 @@
+body.tag,
 body.single-post {
   #page.site .site-content {
     grid-column: 2;
+    padding: 0 5%;
+
+    @media (--tablet) {
+      padding: 0;
+    }
   }
 
   .card__grid {
@@ -11,13 +17,45 @@ body.single-post {
     padding-top: 30%;
     background-size: cover;
     background-position: center center;
+    margin-bottom: 2rem;
   }
 
   .entry-title {
-    margin: 1rem 0;
+    margin: 1rem 0 0;
     font-size: 30px;
     color: var(--brandPrimary);
     font-style: italic;
+  }
+
+  .entry-content {
+    font-family: var(--fontFamilySerif);
+    font-size: 0.8rem;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .entry-footer {
+    font-family: var(--fontFamilySerif);
+    font-size: 0.8rem;
+    border: 1px solid #D5D5D5;
+    border-left: 0;
+    border-right: 0;
+    padding: 1rem 0;
+    margin-top: 4rem;
+  }
+
+  .entry-meta {
+    display: flex;
+    font-family: var(--fontFamilySerif);
+    color: #9D9FA2;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+
+    & *:first-child {
+      margin-right: 2rem;
+    }
   }
 }
 
@@ -114,6 +152,45 @@ body.single-post {
     &:last-child {
       width: 25%;
       padding-left: 5%;
+      display: none;
+
+      @media (--tablet) {
+        display: block;
+      }
     }
+  }
+}
+
+.heateor_sss_sharing_ul {
+  display: flex;
+  align-items: center;
+
+  &:before {
+    content: "Share";
+    margin-right: 1rem;
+  }
+}
+
+.entry-tags-container {
+  margin-top: 0.5rem;
+  span {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  a {
+    color: #9D9FA2;
+    text-decoration: underline;
+    margin-right: 0.5rem;
+  }
+}
+
+.related-posts {
+  margin-top: 4rem;
+
+  .related-posts__header {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
   }
 }

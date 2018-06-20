@@ -33,7 +33,7 @@
   --fontWeightNormal: 400;
   --fontWeightSemibold: 500;
   --fontWeightBold: 700;
-  --fontFamilySerif: "EB Garamond";
+  --fontFamilySerif: "Sentinel SSm A", "Sentinel SSm B";
   --fontAwesome: "Font Awesome 5 Light";
 
   --boxShadow: {

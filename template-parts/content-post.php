@@ -8,35 +8,26 @@
  */
 $featured_image = get_the_post_thumbnail_url($post->ID, 'full');
 ?>
-<h6 class="u-uppercase color-brandSecondary mb-6">CBD Blog &amp; News</h6>
+<h6 class="u-uppercase color-brandSecondary mb-6"><a href="/blog" class="color-brandSecondary">CBD Blog &amp; News</a></h6>
 <div class="two-column-layout">
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-      <div class="container">
         <?php the_title( '<h1 class="entry-title">', '</h1>' );
 
           if ( 'post' === get_post_type() ) :
           ?>
           <div class="entry-meta">
-            <?php
-              if ( function_exists('get_field') ) {
-                $author = get_field('post_author')[0];
-                if ( !empty($author) ) {
-                  $author->acf = get_fields($author->ID);
-                  print sprintf("Written by %s, %s", $author->post_title, $author->acf['position']);
-                } else {
-                  print sprintf("Written by %s on %s", get_the_author(), get_the_date());
-                }
-              }
-            ?>
+            <div class="entry-meta-author"><?php print sprintf("Posted by: %s", get_the_author()); ?></div>
+            <div class="entry-meta-date"><?php print sprintf("Date: %s", get_the_date()); ?></div>
           </div><!-- .entry-meta -->
           <?php endif; ?>
-      </div>
+      <?php if ( has_post_thumbnail() ) : ?>
       <div class="post-featured-image" style="background-image: url(<?php echo $featured_image; ?>);"></div>
+      <?php endif; ?>
     </header><!-- .entry-header -->
 
-    <div class="entry-content container">
+    <div class="entry-content">
       <?php
       the_content( sprintf(
         wp_kses(
@@ -59,12 +50,16 @@ $featured_image = get_the_post_thumbnail_url($post->ID, 'full');
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">
-      <div class="container">
-        <h3 class="color-secondary">Related Posts & News</h3>
-        <?php get_template_part( 'template-parts/page/content', 'random' ); ?>
-      </div>
+    <?php print do_shortcode( '[Sassy_Social_Share]' ); ?>
+      <div class="entry-tags-container"><?php print the_tags( '<span>Tags</span> ', ' ' ); ?></div>
     </footer><!-- .entry-footer -->
   </article><!-- #post-<?php the_ID(); ?> -->
 
   <div class="sidebar">Sidebar</div>
+</div>
+
+
+<div class="related-posts">
+  <h3 class="related-posts__header color-brandSecondary fs-italic">Related Posts & News</h3>
+  <?php get_template_part( 'template-parts/page/content', 'random' ); ?>
 </div>

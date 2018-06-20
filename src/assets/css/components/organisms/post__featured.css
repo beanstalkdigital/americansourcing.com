@@ -1,5 +1,5 @@
 .post__featured {
-  font-family: 'EB Garamond';
+  font-family: var(--fontFamilySerif);
   background-color: var(--brandPrimary);
   color: var(--white);
 

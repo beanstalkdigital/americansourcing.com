@@ -8,6 +8,10 @@
   & p {
     display: none;
   }
+
+  &__logo {
+    width: 210px !important;
+  }
 }
 
 .bing {
@@ -24,9 +28,15 @@
 }
 .site-header .bing,
 .vcv-header .bing {
-  margin-top: 13px;
+  margin-top: 10px;
 }
 
 .vce-basic-menu-container .vce-basic-menu nav>ul.menu>li.menu-item>a {
   font-weight: 300;
+}
+
+.menu-item a {
+  font-family: var(--fontFamilySerif);
+  font-weight: var(--fontWeightSemibold) !important;
+  font-size: 0.7rem !important;
 }

@@ -6,8 +6,9 @@
   color: inherit;
   background-color: var(--lightGray);
   align-self: stretch;
-  box-shadow: 0 0 30px rgba(#2a3a53,0);
-  transition: box-shadow 0.2s ease-in-out;
+  box-shadow: 0 0 30px rgba(42,58,83, 0);
+  transform: translateY(0);
+  transition: box-shadow 0.2s ease-in-out, transform 0.1s ease-in-out;
   margin-bottom: 1rem;
 
   @media (--tablet) {
@@ -26,12 +27,15 @@
     will-change: opacity;
     transition: opacity 0.3s ease-in-out;
     z-index: 1;
+    pointer-events: none;
   }
 
   &:hover {
+    transform: translateY(-10px);
+
     text-decoration: none;
 
-    box-shadow: 0 0 30px rgba(#2a3a53,0.2);
+    box-shadow: 0 0 30px rgba(42,58,83, 0.2);
   }
 
   &.hentry {
@@ -76,6 +80,10 @@
 
     & .entry-header {
       flex: 1;
+
+      & .entry-title {
+        font-size: 1.2rem;
+      }
     }
   }
 
@@ -109,8 +117,10 @@
     color: var(--darkGray);
 
     font-family: var(--fontFamilySerif);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1.4;
+
+    margin-top: 0.5rem;
 
     flex: 1;
   }
