@@ -1,7 +1,7 @@
 <?php
 
 function eversight_scripts() {
-  wp_enqueue_style( 'typekit-fonts', "https://use.typekit.net/dgk5atv.css", null, "screen" );
+  // wp_enqueue_style( 'typekit-fonts', "https://use.typekit.net/dgk5atv.css", null, "screen" );
 
   wp_enqueue_script(
     'eversight-js-index',
