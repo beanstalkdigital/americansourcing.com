@@ -8,8 +8,6 @@
  *
  * @package eversight
  */
-  $header = get_post(1027);
-  $header = apply_filters( 'the_content', $header->post_content );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -29,7 +27,10 @@
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'eversight-wp' ); ?></a>
 <div id="page" class="site">
   <header id="masthead" class="site-header">
-    <?php print $header; ?>
+    <?php
+      $header = get_post(1027);
+      print vcfilter('vcv:frontend:content', do_shortcode($header->post_content));
+    ?>
   </header><!-- #masthead -->
 
 	<div id="content" class="site-content" style="">

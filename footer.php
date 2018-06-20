@@ -14,8 +14,7 @@
 <footer id="colophon" class="site-footer">
   <?php
     $footer = get_post(1029);
-    $footer = apply_filters( 'the_content', $footer->post_content );
-    print $footer;
+    print vcfilter('vcv:frontend:content', do_shortcode($footer->post_content));
   ?>
 </footer>
 </div><!-- #page -->

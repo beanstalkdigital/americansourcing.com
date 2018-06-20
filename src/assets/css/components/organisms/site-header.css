@@ -22,8 +22,8 @@
     width:12px;
   }
 }
-
-*:not(.site-header) .vcv-header .bing {
+.site-header .bing,
+.vcv-header .bing {
   margin-top: 13px;
 }
 

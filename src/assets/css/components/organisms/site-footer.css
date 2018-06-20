@@ -1,5 +1,13 @@
 .site-footer {
+  margin-top: 50px;
   & > p {
     display: none;
   }
+}
+.footer-img .vce-col-inner {
+  background-image: url(/wp-content/uploads/2018/05/Asset-1@2x.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 70px !important;
 }
