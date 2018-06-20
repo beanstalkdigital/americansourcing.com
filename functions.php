@@ -41,4 +41,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-?>
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function amsource_widgets_init() {
+	register_sidebar(array(
+		'name'          => 'Blog Sidebar',
+		'id'            => 'amsource_blog_sidebar',
+		'before_widget' => '<div  id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-header">',
+		'after_title'   => '</h3>',
+	));
+}
+add_action( 'widgets_init', 'amsource_widgets_init' );

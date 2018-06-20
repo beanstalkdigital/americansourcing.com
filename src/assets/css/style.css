@@ -13,6 +13,7 @@
 @import "./components/organisms/home-grid";
 @import "./components/organisms/post__featured";
 @import "./components/organisms/post__card";
+@import "./components/organisms/sidebar";
 
 /* Pages */
 @import "./pages/home";

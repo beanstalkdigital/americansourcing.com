@@ -55,7 +55,13 @@ $featured_image = get_the_post_thumbnail_url($post->ID, 'full');
     </footer><!-- .entry-footer -->
   </article><!-- #post-<?php the_ID(); ?> -->
 
-  <div class="sidebar">Sidebar</div>
+  <div class="sidebar">
+    <?php if ( is_active_sidebar( 'amsource_blog_sidebar' ) ) : ?>
+      <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+        <?php dynamic_sidebar( 'amsource_blog_sidebar' ); ?>
+      </div><!-- #primary-sidebar -->
+    <?php endif; ?>
+  </div>
 </div>
 
 

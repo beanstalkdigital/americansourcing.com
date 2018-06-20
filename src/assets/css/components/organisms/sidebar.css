@@ -1,0 +1,61 @@
+.sidebar {
+  font-family: var(--fontFamilySerif);
+
+  .widget-header {
+    margin: 1.5rem 0 0.5rem;
+
+    font-size: 1.2rem;
+    font-weight: var(--fontWeightNormal);
+    font-style: italic;
+
+    color: var(--brandSecondary);
+  }
+
+  .widget_categories,
+  .widget_tag_cloud {
+    a {
+      color: #808080;
+    }
+
+    .tagcloud {
+      a {
+        display: block;
+        font-size: 0.8rem !important;
+      }
+    }
+  }
+
+  .widget_recent_entries {
+    ul {
+      li {
+        margin: 0;
+        margin-bottom: 1rem;
+        padding: 1rem;
+
+        background-color: var(--lightGray);
+
+        a {
+          font-style: italic;
+        }
+
+        span {
+          display: block;
+
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+
+  .widget {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
