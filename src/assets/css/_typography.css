@@ -77,7 +77,7 @@ h1,
 h2,
 .h2 {
   @media (--tablet) {
-    font-size: 285.7%;
+    font-size: 200%;
   }
 }
 
@@ -86,7 +86,7 @@ h3,
   font-size: 160%;
 
   @media (--tablet) {
-    font-size: 200%;
+    font-size: 170%;
   }
 }
 
@@ -101,11 +101,15 @@ h6,
     margin-bottom: 0.5em;
 
     line-height: 1.4;
+
+    @media (--tablet) {
+      font-size: 120%;
+    }
 }
 
 h4,
 .h4 {
-    font-size: 135%;
+    font-size: 120%;
 
     sup {
       top: -0.5rem;

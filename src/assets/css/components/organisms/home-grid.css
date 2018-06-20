@@ -85,6 +85,9 @@
 
     & .homeGrid__item__text {
       margin: 0;
+      font-weight: var(--fontWeightNormal);
+      font-style: italic;
+      font-size: 1.2rem;
     }
 
     a {
