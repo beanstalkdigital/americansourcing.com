@@ -1,5 +1,7 @@
 .site-footer {
   margin-top: 50px;
+  padding: 0 30px 30px;
+
   & > p {
     display: none;
   }
@@ -10,4 +12,8 @@
   background-position: center center;
   background-repeat: no-repeat;
   padding-top: 60px !important;
+}
+
+.vcv-footer {
+  padding: 0 30px 30px;
 }
