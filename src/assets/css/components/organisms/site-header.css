@@ -31,12 +31,16 @@
   margin-top: 10px;
 }
 
-.vce-basic-menu-container .vce-basic-menu nav>ul.menu>li.menu-item>a {
-  font-weight: 300;
-}
+.vce-basic-menu-container .vce-basic-menu nav>ul.menu>li.menu-item {
 
-.menu-item a {
-  font-family: var(--fontFamilySerif);
-  font-weight: var(--fontWeightSemibold) !important;
-  font-size: 0.7rem !important;
+  &.current-menu-item a,
+  a:hover {
+      color: var(--brandSecondary);
+  }
+
+  a {
+    font-family: var(--fontFamilySerif);
+    font-weight: var(--fontWeightSemibold) !important;
+    font-size: 0.7rem !important;
+  }
 }
